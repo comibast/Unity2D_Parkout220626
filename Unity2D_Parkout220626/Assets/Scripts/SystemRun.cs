@@ -42,11 +42,25 @@ namespace Comibast
 
 
         #region 事件：程式入口
+
+        //喚醒事件: 開始前執行一次, 取得元件等
+        private void Awake()
+        {
+            ani = GetComponent<Animator>();
+        }
+
         private void Start()
         {
             print("Hi! 小道! :D");
         }
+
+        //更新事件: 每秒60次fps
+        private void Update()
+        {
+            print("<color=yellow>更新事件執行中</color>");
+        }
         #endregion
+
 
     }
 }
