@@ -5847,13 +5847,14 @@ GameObject:
   m_Component:
   - component: {fileID: 596954139}
   - component: {fileID: 596954138}
+  - component: {fileID: 596954140}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2API\u7684\u7A7A\u7269\u4EF6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &596954138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,7 +5862,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596954137}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20dfb225a65eba54a94fe0637fff0d00, type: 3}
   m_Name: 
@@ -5881,6 +5882,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596954140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596954137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a3b72844d7e24399582dc7e8eda40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turtle: {fileID: 1419266172}
+  startPoint: {fileID: 1310580001}
 --- !u!1 &720816785
 GameObject:
   m_ObjectHideFlags: 0
@@ -6217,6 +6232,7 @@ GameObject:
   - component: {fileID: 1419266177}
   - component: {fileID: 1419266176}
   - component: {fileID: 1419266178}
+  - component: {fileID: 1419266179}
   m_Layer: 0
   m_Name: "\u5FCD\u8005\u9F9C"
   m_TagString: Untagged
@@ -6342,12 +6358,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1419266178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6362,6 +6378,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedRun: 3.5
   heightJump: 350
+--- !u!114 &1419266179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419266172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58441a93fe27e33499af792bcaeec815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1458203586
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,7 +6660,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7802198, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

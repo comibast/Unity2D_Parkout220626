@@ -28,8 +28,7 @@ namespace Comibast
 
         [SerializeField,Header("跑步速度"),Tooltip("這是角色的跑步速度"),Range(0,100)]      
         private float speedRun = 3.5f;
-        [SerializeField,Header("跳躍高度"), Range(0, 3000)]      
-        private float heightJump = 350;
+        
         private Animator ani;
         private Rigidbody2D rig;
 
@@ -37,6 +36,18 @@ namespace Comibast
 
 
         #region 功能：實作該系統的方法
+        //方法 Method
+        //語法:
+        //修飾詞 傳回資料類型 方法名稱(參數) { 程式 }
+        /// <summary>
+        /// 跑步功能
+        /// </summary>
+        private void Run()
+        {
+            print("跑步中~");
+            rig.velocity = new Vector2(speedRun, rig.velocity.y);
+        }
+
 
         #endregion
 
@@ -46,18 +57,24 @@ namespace Comibast
         //喚醒事件: 開始前執行一次, 取得元件等
         private void Awake()
         {
+            //ani 指定忍者龜身上的animator
             ani = GetComponent<Animator>();
+            rig = GetComponent<Rigidbody2D>();
         }
 
+        //開始事件: 播放遊戲時執行一次
         private void Start()
         {
-            print("Hi! 小道! :D");
+            //print("Hi! 小道! :D");
         }
 
-        //更新事件: 每秒60次fps
+        //更新事件: 每秒執行約60次fps
         private void Update()
         {
-            print("<color=yellow>更新事件執行中</color>");
+            //print("<color=yellow>更新事件執行中</color>");
+            //呼叫方法: 方法名稱(對應的引數);
+            Run();
+        
         }
         #endregion
 
